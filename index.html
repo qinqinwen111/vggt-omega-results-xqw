@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VGGT-Omega Dyn-HaMR Results</title>
+  <link rel="icon" href="data:,">
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
     :root {
@@ -43,6 +44,20 @@
       margin: 0;
       color: var(--muted);
       font-size: 14px;
+    }
+    .page-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      margin-top: 12px;
+      padding: 7px 10px;
+      border: 1px solid #b9d8d4;
+      border-radius: 6px;
+      color: #0f4f4a;
+      background: #eef6f5;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 650;
     }
     .layout {
       display: grid;
@@ -229,7 +244,8 @@
 <body>
   <header class="page">
     <h1>VGGT-Omega Dyn-HaMR Results</h1>
-    <p>6 videos · 1 FPS sampling · 512 input resolution · GLB point clouds with predicted cameras</p>
+    <p>6 videos · 2 FPS sampling · 512 input resolution · GLB point clouds with predicted cameras</p>
+    <a class="page-link" href="kiri/">KIRI reconstruction results</a>
   </header>
   <div class="layout">
     <nav aria-label="Video results">
