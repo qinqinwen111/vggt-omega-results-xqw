@@ -204,6 +204,37 @@
       line-height: 1.4;
       text-align: center;
     }
+    .external-panel {
+      display: grid;
+      place-items: center;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      min-height: 360px;
+      padding: 24px;
+      background: #eef1f5;
+      text-align: center;
+    }
+    .external-panel a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 42px;
+      padding: 10px 14px;
+      border-radius: 6px;
+      border: 1px solid #0f766e;
+      color: #ffffff;
+      background: #0f766e;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 720;
+    }
+    .external-panel p {
+      max-width: 460px;
+      margin: 12px auto 0;
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1.45;
+    }
     .tag {
       color: var(--accent);
       font-size: 12px;
@@ -260,7 +291,7 @@
       <a href="#agibot-left-hand"><span>02</span> Agibot left hand</a>
       <a href="#head-front"><span>03</span> Head front</a>
       <a href="#wrist-3dgs"><span>04</span> Wrist 3DGS</a>
-      <a href="#visual-mask"><span>05</span> Visual mask</a>
+      <a href="#scanning-kiri"><span>05</span> Scanning KIRI</a>
     </nav>
 
     <main>
@@ -359,13 +390,14 @@
         </div>
       </section>
 
-      <section class="result" id="visual-mask">
+      <section class="result" id="scanning-kiri">
         <div class="result-head">
           <div>
-            <h2>Visual mask</h2>
-            <p>/Users/xuqinwen/Documents/project/twinrl/blender/scene/franka_scan/visual_mask</p>
+            <h2>Scanning KIRI share</h2>
+            <p>Official KIRI Engine online viewer for the full scanning result.</p>
           </div>
           <div class="links">
+            <a href="https://www.kiriengine.app/share/shareModel/657c0956d39c4c22892e272b09b9f704" target="_blank" rel="noopener">Open KIRI Viewer</a>
             <a href="models/visual_mask/visual_cropped.obj">OBJ</a>
             <a href="models/visual_mask/3DModel.jpg">Texture</a>
           </div>
@@ -373,11 +405,16 @@
         <div class="media-grid">
           <div class="panel">
             <div class="panel-title">Input video <span class="tag">Not found</span></div>
-            <div class="empty-video">No source video was present in the visual_mask folder.</div>
+            <div class="empty-video">No source video was present for this scanning result.</div>
           </div>
           <div class="panel">
-            <div class="panel-title">KIRI reconstruction <span class="tag">OBJ</span></div>
-            <iframe title="Visual mask KIRI reconstruction" loading="lazy" src="viewer.html?type=obj&amp;obj=models/visual_mask/visual_cropped.obj&amp;mtl=models/visual_mask/visual_cropped.mtl"></iframe>
+            <div class="panel-title">KIRI reconstruction <span class="tag">External viewer</span></div>
+            <div class="external-panel">
+              <div>
+                <a href="https://www.kiriengine.app/share/shareModel/657c0956d39c4c22892e272b09b9f704" target="_blank" rel="noopener">Open KIRI Viewer</a>
+                <p>The full scanning model is hosted by KIRI Engine. It opens in a new tab because third-party embedding may be blocked.</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
