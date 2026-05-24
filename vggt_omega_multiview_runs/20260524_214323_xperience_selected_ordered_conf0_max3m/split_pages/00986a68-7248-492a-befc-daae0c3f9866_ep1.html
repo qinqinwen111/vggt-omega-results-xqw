@@ -20,7 +20,7 @@
     .section h2 { margin:0 0 12px; font-size:17px; line-height:1.35; letter-spacing:0; }
     .frame-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
     figure { margin:0; min-width:0; }
-    img, video, .glb.gz-viewer { display:block; width:100%; background:var(--soft); border:1px solid #cfd6e3; border-radius:6px; overflow:hidden; }
+    img, video, .glb-viewer { display:block; width:100%; background:var(--soft); border:1px solid #cfd6e3; border-radius:6px; overflow:hidden; }
     img, video { aspect-ratio:1/1; object-fit:contain; }
     figcaption { margin-top:5px; color:var(--muted); font-size:12px; line-height:1.35; overflow-wrap:anywhere; }
     .result { background:var(--panel); border:1px solid var(--line); border-radius:8px; overflow:hidden; margin-bottom:18px; }
@@ -28,11 +28,11 @@
     .result h2 { margin:0; font-size:17px; line-height:1.35; letter-spacing:0; }
     .meta { color:var(--muted); font-size:13px; white-space:nowrap; }
     .note { margin:8px 16px 12px; color:var(--muted); font-size:13px; line-height:1.5; }
-    .result-body { display:grid; grid-template-columns:minmax(320px,.95fr) minmax(420px,1.05fr); gap:14px; padding:0 16px 16px; }
-    .video-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; }
-    video, .glb.gz-viewer { min-height:230px; }
-    .glb.gz-viewer { height:500px; }
-    .glb.gz-slot { display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:13px; text-align:center; padding:16px; }
+    .result-body { display:grid; grid-template-columns:minmax(180px,260px) minmax(0,1fr); gap:12px; padding:0 16px 16px; }
+    .video-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(86px,1fr)); gap:8px; align-content:start; }
+    video { min-height:0; }
+    .glb-viewer { height:clamp(560px,72vh,820px); }
+    .glb-slot { display:flex; align-items:center; justify-content:center; color:var(--muted); font-size:13px; text-align:center; padding:16px; }
     .links { display:flex; flex-wrap:wrap; gap:12px; align-items:center; margin-top:8px; color:var(--muted); font-size:13px; }
     a { color:var(--accent); text-decoration:none; font-weight:650; }
     a:hover { text-decoration:underline; }
@@ -46,7 +46,7 @@
       .result-head { display:block; }
       .meta { margin-top:6px; white-space:normal; }
       .result-body { grid-template-columns:1fr; padding:0 12px 12px; }
-      .glb.gz-viewer { height:420px; }
+      .glb-viewer { height:480px; }
     }
     </style>
 </head>
