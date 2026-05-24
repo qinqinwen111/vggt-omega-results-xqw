@@ -20,6 +20,7 @@
     .nav a, .nav .current { display:inline-block; border:1px solid var(--line); border-radius:6px; padding:6px 9px; background:#fff; }
     .nav .current { color:var(--ink); font-weight:700; background:var(--soft); }
     .nav { display:flex; gap:14px; flex-wrap:wrap; color:var(--muted); font-size:13px; }
+    .queue { margin:8px 0 0; color:var(--muted); font-size:13px; line-height:1.5; }
     .card, .result-panel { background:var(--panel); border:1px solid var(--line); border-radius:8px; overflow:hidden; margin-bottom:16px; }
     .card { padding:14px; }
     .thumb-grid { display:grid; grid-template-columns:repeat(6, minmax(120px,1fr)); gap:10px; }
@@ -42,6 +43,7 @@
   <header>
     <h1>Gen-EgoData lace_up_shoes / 0354ae65526c4c82b3fd9c79c597e371</h1>
     <div class="nav"><a href="../../../vggt_omega_results_portal/index.html">返回总入口</a><a href="../../../vggt_omega_multiview_runs/20260524_214323_xperience_selected_ordered_conf0_max3m/split_pages/00986a68-7248-492a-befc-daae0c3f9866_ep1.html">Xperience 00986a68 ep1</a><a href="../../../vggt_omega_multiview_runs/20260524_214323_xperience_selected_ordered_conf0_max3m/split_pages/03f00b2b-052d-4a8f-ad13-006c9dd0bcb9_ep1.html">Xperience 03f00b2b ep1</a><a href="../../../vggt_omega_multiview_runs/20260524_214323_xperience_selected_ordered_conf0_max3m/split_pages/0480eba9-1eb1-4527-a980-707bca52f25d_ep1.html">Xperience 0480eba9 ep1</a><a href="../../../vggt_omega_multiview_runs/20260524_233052_geneego_remaining_conf0_max3m/geneego_10_pages/fold_clothes_359a64ea.html">fold_clothes</a><a href="../../../vggt_omega_multiview_runs/20260524_233052_geneego_remaining_conf0_max3m/geneego_10_pages/fold_pants_046098fd.html">fold_pants</a><span class="current">当前：lace_up_shoes</span></div>
+    <p class="queue" id="queue-status">本页 2 个完整 GLB 将自动按顺序加载。</p>
   </header>
   <main>
     <section class="card">
@@ -151,11 +153,11 @@
     function loadNext() {
       index += 1;
       if (index >= slots.length) {
-        statusEl.textContent = `GLB 自动加载完成：${slots.length}/${slots.length}`;
+        if (statusEl) statusEl.textContent = `GLB 自动加载完成：${slots.length}/${slots.length}`;
         return;
       }
       const slot = slots[index];
-      statusEl.textContent = `正在自动加载 GLB：${index + 1}/${slots.length}`;
+      if (statusEl) statusEl.textContent = `正在自动加载 GLB：${index + 1}/${slots.length}`;
       const iframe = document.createElement('iframe');
       iframe.className = 'glb-viewer';
       iframe.loading = 'eager';
