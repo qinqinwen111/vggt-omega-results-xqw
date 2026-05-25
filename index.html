@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>VGGT-Omega 两个数据集结果入口</title>
+  <title>VGGT-Omega 数据集结果入口</title>
   <style>
     :root { --bg:#f6f7f9; --panel:#fff; --ink:#172033; --muted:#5e6878; --line:#d9e0ea; --accent:#146c7f; --soft:#eef2f6; }
     * { box-sizing:border-box; }
@@ -28,8 +28,8 @@
 </head>
 <body>
   <header>
-    <h1>VGGT-Omega 两个数据集结果入口</h1>
-    <p>当前预览保留 6 条结果：Xperience-10M 3 条，Gen-EgoData 3 条。选择数据集条目查看对应的可视化结果。</p>
+    <h1>VGGT-Omega 数据集结果入口</h1>
+    <p>当前预览包含 Xperience-10M、Gen-EgoData 和 Ego-Exo4D Cooking。选择数据集条目查看对应的可视化结果。</p>
   </header>
   <main>
     <div class="grid">
@@ -68,6 +68,17 @@
           <a class="entry" href="vggt_omega_multiview_runs/20260524_233052_geneego_remaining_conf0_max3m/geneego_10_pages/lace_up_shoes_0354ae65.html">
             <img src="Gen-EgoData_one_per_skill_preview/lace_up_shoes_0354ae65526c4c82b3fd9c79c597e371/undistorted_hfov100/camera3_undistorted_first.jpg" alt="lace_up_shoes processed camera3">
             <div><h3>lace_up_shoes</h3><p>单路 camera3 + 6 路结果</p><span class="open">打开子页面</span></div>
+          </a>
+        </div>
+      </section>
+      <section class="dataset">
+        <div class="label">Ego-Exo4D Cooking</div>
+        <h2>4 路非 Aria 相机 + 1 路去畸变 Aria ego RGB</h2>
+        <p>5 个 cooking take；设置为 1fps、Confidence Threshold=0、Max Points=3,000,000，Aria 去畸变使用 HFOV90。</p>
+        <div class="entry-list">
+          <a class="entry" href="vggt_omega_multiview_runs/20260525_234903_egoexo_cooking_5takes_aria_undist_hfov90_conf0_max3m/egoexo_cooking_hfov90_pages/">
+            <img src="vggt_omega_multiview_runs/20260525_234903_egoexo_cooking_5takes_aria_undist_hfov90_conf0_max3m/egoexo_cooking_hfov90_pages/first_frames/iiith_cooking_111_2/aria01_214-1_original_resized.jpg" alt="Ego-Exo4D Aria original first frame">
+            <div><h3>HFOV90 VGGT-Omega results</h3><p>非 Aria、Aria、混合相机三种设置</p><span class="open">打开子页面</span></div>
           </a>
         </div>
       </section>

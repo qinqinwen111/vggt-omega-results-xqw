@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ego-Exo4D cooking VGGT-Omega HFOV90 results</title><style>
+    :root { --bg:#f6f7f9; --panel:#fff; --ink:#172033; --muted:#5e6878; --line:#d9e0ea; --soft:#eef2f6; --accent:#146c7f; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--bg); color:var(--ink); font-family:Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    header { padding:20px 24px 14px; background:#fff; border-bottom:1px solid var(--line); position:sticky; top:0; z-index:5; }
+    main { width:min(1760px,100%); margin:0 auto; padding:18px 20px 40px; }
+    h1 { margin:0 0 8px; font-size:24px; line-height:1.25; letter-spacing:0; }
+    h2 { margin:0 0 10px; font-size:18px; letter-spacing:0; }
+    h3 { margin:0; font-size:16px; letter-spacing:0; }
+    h4 { margin:0 0 8px; font-size:14px; letter-spacing:0; }
+    p { margin:0; color:var(--muted); font-size:13px; line-height:1.5; }
+    a { color:var(--accent); text-decoration:none; font-weight:600; }
+    a:hover { text-decoration:underline; }
+    .nav { display:flex; gap:14px; flex-wrap:wrap; color:var(--muted); font-size:13px; align-items:center; }
+    .child-nav { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+    .child-nav a, .child-nav span { display:inline-flex; align-items:center; min-height:30px; padding:6px 9px; border:1px solid var(--line); border-radius:6px; background:#fff; font-size:12px; line-height:1.25; }
+    .child-nav .active-link { color:#172033; background:#eef2f6; font-weight:700; }
+    .card, .result-panel { background:var(--panel); border:1px solid var(--line); border-radius:8px; overflow:hidden; margin-bottom:16px; }
+    .card { padding:14px; }
+    .take-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:14px; }
+    .take-card { display:block; background:#fff; border:1px solid var(--line); border-radius:8px; overflow:hidden; color:inherit; }
+    .take-card:hover { text-decoration:none; border-color:#9bb6c3; }
+    .take-card img { display:block; width:100%; aspect-ratio:16 / 9; object-fit:contain; background:var(--soft); border-bottom:1px solid var(--line); }
+    .take-card div { padding:12px; }
+    .take-card strong { display:block; font-size:15px; margin-bottom:4px; }
+    .thumb-grid { display:grid; grid-template-columns:repeat(5, minmax(140px,1fr)); gap:10px; }
+    .thumb, .video-tile { margin:0; min-width:0; }
+    .thumb img { display:block; width:100%; aspect-ratio:1 / 1; object-fit:contain; background:var(--soft); border:1px solid #cfd6e3; border-radius:6px; }
+    video { display:block; width:100%; aspect-ratio:1 / 1; object-fit:contain; background:var(--soft); border:1px solid #cfd6e3; border-radius:6px; }
+    figcaption { margin-top:5px; color:var(--muted); font-size:12px; line-height:1.35; overflow-wrap:anywhere; }
+    figcaption b { display:block; color:#273246; font-weight:650; }
+    figcaption span { display:block; }
+    .result-title { display:flex; justify-content:space-between; align-items:flex-start; gap:12px; padding:14px 14px 10px; }
+    .runtime { text-align:right; min-width:240px; }
+    .result-body { display:grid; grid-template-columns:minmax(300px,0.72fr) minmax(640px,1.28fr); gap:14px; padding:0 14px 14px; }
+    .video-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(125px,1fr)); gap:10px; }
+    .glb-viewer { display:block; width:100%; height:680px; background:var(--soft); border:1px solid #cfd6e3; border-radius:6px; overflow:hidden; }
+    .links { display:flex; flex-wrap:wrap; gap:12px; align-items:center; padding:10px 0 0; color:var(--muted); font-size:12px; }
+    .error-box { min-height:160px; padding:12px; border:1px solid #e9b2b2; background:#fff3f3; color:#8a1f1f; border-radius:6px; }
+    @media (max-width:1000px) { main { padding:14px 12px 30px; } header { padding:18px 14px 12px; position:static; } .thumb-grid { grid-template-columns:repeat(2,minmax(120px,1fr)); } .result-body { grid-template-columns:1fr; } .result-title { display:block; } .runtime { text-align:left; min-width:0; margin-top:6px; } .glb-viewer { height:440px; } }
+    </style></head>
+<body><header><h1>Ego-Exo4D Cooking · VGGT-Omega Aria HFOV90 去畸变结果</h1><p>5 条 take；非 Aria-only 复用旧结果，Aria-only 和 mixed 使用 Aria camera-rgb Fisheye624 标定去畸变后重跑。参数：1fps，最多30个时间点，Confidence Threshold=0，Max Points=3,000,000。</p></header><main><section class="card"><h2>选择 take</h2><div class="take-grid"><a class="take-card" href="iiith_cooking_111_2.html"><img src="first_frames/iiith_cooking_111_2/aria01_214-1_original_resized.jpg" alt="iiith_cooking_111_2"><div><strong>1001 Cooking an Omelet</strong><p>iiith_cooking_111_2</p><p>非 Aria 旧结果 + Aria HFOV90 去畸变新结果。</p></div></a><a class="take-card" href="sfu_cooking025_2.html"><img src="first_frames/sfu_cooking025_2/aria01_214-1_original_resized.jpg" alt="sfu_cooking025_2"><div><strong>1010 Making Cucumber &amp; Tomato Salad</strong><p>sfu_cooking025_2</p><p>非 Aria 旧结果 + Aria HFOV90 去畸变新结果。</p></div></a><a class="take-card" href="fair_cooking_08_10.html"><img src="first_frames/fair_cooking_08_10/aria02_214-1_original_resized.jpg" alt="fair_cooking_08_10"><div><strong>1011 Making Sesame-Ginger Asian Salad</strong><p>fair_cooking_08_10</p><p>非 Aria 旧结果 + Aria HFOV90 去畸变新结果。</p></div></a><a class="take-card" href="sfu_cooking025_7.html"><img src="first_frames/sfu_cooking025_7/aria01_214-1_original_resized.jpg" alt="sfu_cooking025_7"><div><strong>1013 Making Coffee latte</strong><p>sfu_cooking025_7</p><p>非 Aria 旧结果 + Aria HFOV90 去畸变新结果。</p></div></a><a class="take-card" href="iiith_cooking_109_5.html"><img src="first_frames/iiith_cooking_109_5/aria01_214-1_original_resized.jpg" alt="iiith_cooking_109_5"><div><strong>1015 Making Milk Tea</strong><p>iiith_cooking_109_5</p><p>非 Aria 旧结果 + Aria HFOV90 去畸变新结果。</p></div></a></div></section></main></body></html>
